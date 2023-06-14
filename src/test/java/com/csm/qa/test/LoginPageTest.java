@@ -39,7 +39,8 @@ public class LoginPageTest extends CSMBase{
 	{
 		ValidateLoginPageTitle();
 		ValidateCMSLogoImage();
-        homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+       // homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+        homePage=loginPage.login("Admin", "AdminQA1");
 		Thread.sleep(1000);
 		String homePagetitle= driver.getTitle();
 		Assert.assertEquals(homePagetitle,"Home Page", "Invalid Credentials");

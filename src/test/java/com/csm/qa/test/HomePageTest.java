@@ -18,7 +18,8 @@ public class HomePageTest extends CSMBase {
 	{
 		initialize();
 		loginPage= new LoginPage(driver);
-		homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));	
+		//homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		homePage=loginPage.login("Admin", "AdminQA1");
 	}
 	
 	public void VerifyHomePageTitle() throws InterruptedException

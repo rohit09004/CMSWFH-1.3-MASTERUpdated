@@ -48,6 +48,7 @@ public class CSMBase {
 		 driver.manage().deleteAllCookies();
 		 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestUtil.pageload_wait));
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TestUtil.implicit_wait));
+		// driver.get(prop.getProperty("url"));//url is launched 
 		 driver.get(prop.getProperty("url"));//url is launched 
 	
 		 
