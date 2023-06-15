@@ -3,17 +3,12 @@
 <suite name="Failed suite [CMS Test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="CMS App Test Cases(failed)">
     <classes>
-      <class name="com.csm.qa.test.IDCPagetest">
+      <class name="com.csm.qa.test.LoginPageTest">
         <methods>
-          <include name="createData"/>
-          <include name="clickflangetighteningMatrix"/>
-          <include name="UpdateData"/>
           <include name="setup"/>
-          <include name="clickunitMaster"/>
-          <include name="Validate_DuplicateData"/>
-          <include name="DeleteData"/>
+          <include name="LoginWithValidCredentials"/>
         </methods>
-      </class> <!-- com.csm.qa.test.IDCPagetest -->
+      </class> <!-- com.csm.qa.test.LoginPageTest -->
     </classes>
   </test> <!-- CMS App Test Cases(failed) -->
 </suite> <!-- Failed suite [CMS Test Suite] -->
