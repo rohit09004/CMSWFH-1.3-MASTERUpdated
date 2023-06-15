@@ -20,23 +20,7 @@ public class CSMBase {
 	public static WebDriver driver;
 	//public static  Properties prop;
 	
-//	public CSMBase()
-//	{
-//		try
-//		{
-//		prop = new Properties();
-//		//FileInputStream ip= new FileInputStream("D:\\CCSMAAutomation\\src\\main\\java\\com\\csm"+"/qa/config/config.properties");
-//		FileInputStream ip= new FileInputStream("D:\\Eclipse_rohit\\CMSWFH\\src\\main\\java\\com\\csm\\qa\\config\\configg.properties");
-//		prop.load(ip);
-//		
-//	    }catch(FileNotFoundException e)
-//		{
-//	    	e.printStackTrace();
-//		}catch(IOException e) {
-//			e.printStackTrace();
-//		}	
-//	}
-	// read the property
+
 	
 	public static void initialize() throws InterruptedException
 	{

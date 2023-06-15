@@ -30,4 +30,19 @@ public class LoginPageTest extends CSMBase{
 		System.out.println("Test 1 passed");
 		driver.quit();
 	}
+	
+	@Test(priority=2)
+	public void LoginWithInvalidCredentials() throws InterruptedException
+	{
+		
+       // homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+        //homePage=loginPage.login("Admin", "AdminQA1");
+        loginPage.loginCredentials("Admi", "AdminQA1");
+		Thread.sleep(1000);
+		String homePagetitle= driver.getTitle();
+		Assert.assertEquals(homePagetitle,"Home Page", "Invalid Credentials");
+		System.out.println("Test 1 passed");
+		driver.quit();
+	}
+	
 }

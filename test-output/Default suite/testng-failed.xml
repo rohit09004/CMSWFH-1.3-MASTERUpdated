@@ -5,8 +5,8 @@
     <classes>
       <class name="com.csm.qa.test.LoginPageTest">
         <methods>
+          <include name="LoginWithInvalidCredentials"/>
           <include name="setup"/>
-          <include name="LoginWithValidCredentials"/>
         </methods>
       </class> <!-- com.csm.qa.test.LoginPageTest -->
     </classes>
