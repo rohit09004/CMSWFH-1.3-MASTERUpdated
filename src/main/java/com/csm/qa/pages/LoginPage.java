@@ -42,17 +42,27 @@ public class LoginPage extends CSMBase {
     	 return CMSLogo.isDisplayed();
      }
      
-     public HomePage login(String uid, String pwd)
-     {
+//     public HomePage login(String uid, String pwd)
+//     {
+//    	 UserID.sendKeys(uid);
+//    	 Password.sendKeys(pwd);
+//    	 login_Btn.click(); 
+//    	 closePasswordPoup.click();
+//    	 return new HomePage();
+//    		
+//     }
+     public void loginCredentials(String uid, String pwd) throws InterruptedException {
     	 UserID.sendKeys(uid);
     	 Password.sendKeys(pwd);
     	 login_Btn.click(); 
+    	 Thread.sleep(3000);
     	 closePasswordPoup.click();
-    	 return new HomePage();
-    		
+    	 Thread.sleep(2000);
+    	
      }
-	private void closePasswordPoup() {
-		// TODO Auto-generated method stub
-		
-	}
+     
+//	private void closePasswordPoup() {
+//		// TODO Auto-generated method stub
+//		
+//	}
 }

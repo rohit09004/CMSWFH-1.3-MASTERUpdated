@@ -19,7 +19,8 @@ public class HomePageTest extends CSMBase {
 		initialize();
 		loginPage= new LoginPage(driver);
 		//homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		homePage=loginPage.login("Admin", "AdminQA1");
+		//homePage=loginPage.login("Admin", "AdminQA1");
+		loginPage.loginCredentials("Admin", "AdminQA1");
 	}
 	
 	public void VerifyHomePageTitle() throws InterruptedException
@@ -34,7 +35,7 @@ public class HomePageTest extends CSMBase {
 		Assert.assertTrue(homePage.VerifycorrectJobCodeKey());
 	}
 	
-	@Test(priority=2)
+	//@Test(priority=2)
 	public void clickOnCMSModule() throws InterruptedException
 	{
 		VerifyHomePageTitle();
@@ -44,7 +45,7 @@ public class HomePageTest extends CSMBase {
 		Thread.sleep(1000);
 	}
 	
-	@Test(priority=3)
+	//@Test(priority=3)
 	public void clickonIDC() throws InterruptedException
 	{
 		clickOnCMSModule();

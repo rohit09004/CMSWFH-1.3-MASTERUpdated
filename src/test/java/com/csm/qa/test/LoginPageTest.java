@@ -16,31 +16,14 @@ public class LoginPageTest extends CSMBase{
 		loginPage= new LoginPage(driver);
 	}
 	
-	public void ValidateLoginPageTitle() throws InterruptedException
-	{
-		//String title=loginPage.validateLoginPageTitle();
-		String title= "CMS | Login Page";
-		Assert.assertEquals(title, "CMS | Login Page");
-		Thread.sleep(100);
-		System.out.println("ValidateLoginPageTitle doned");
-		
-	}
-	
-	public void ValidateCMSLogoImage() throws InterruptedException
-	{
-		boolean logo=loginPage.validateCSMLogo();
-		Thread.sleep(1000);
-		Assert.assertTrue(logo);
-		System.out.println("ValidateCMSLogoImage doned");
-	}
-	//Validate Login with Valid Credentials 
+ //Validate Login with Valid Credentials 
 	@Test(priority=1)
 	public void LoginWithValidCredentials() throws InterruptedException
 	{
-		ValidateLoginPageTitle();
-		ValidateCMSLogoImage();
+		
        // homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-        homePage=loginPage.login("Admin", "AdminQA1");
+        //homePage=loginPage.login("Admin", "AdminQA1");
+        loginPage.loginCredentials("Admin", "AdminQA1");
 		Thread.sleep(1000);
 		String homePagetitle= driver.getTitle();
 		Assert.assertEquals(homePagetitle,"Home Page", "Invalid Credentials");

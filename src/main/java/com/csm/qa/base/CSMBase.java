@@ -3,7 +3,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.Properties;
+//import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,25 +16,26 @@ import com.csm.qa.util.TestUtil;
 public class CSMBase {
 	
 	public static WebDriver driver;
-	public static  Properties prop;
+	//public static  Properties prop;
 	
-	public CSMBase()
-	{
-		try
-		{
-		prop = new Properties();
-		//FileInputStream ip= new FileInputStream("D:\\CCSMAAutomation\\src\\main\\java\\com\\csm"+"/qa/config/config.properties");
-		FileInputStream ip= new FileInputStream("D:\\Eclipse_rohit\\CMSWFH\\src\\main\\java\\com\\csm\\qa\\config\\configg.properties");
-		prop.load(ip);
-		
-	    }catch(FileNotFoundException e)
-		{
-	    	e.printStackTrace();
-		}catch(IOException e) {
-			e.printStackTrace();
-		}	
-	}
+//	public CSMBase()
+//	{
+//		try
+//		{
+//		prop = new Properties();
+//		//FileInputStream ip= new FileInputStream("D:\\CCSMAAutomation\\src\\main\\java\\com\\csm"+"/qa/config/config.properties");
+//		FileInputStream ip= new FileInputStream("D:\\Eclipse_rohit\\CMSWFH\\src\\main\\java\\com\\csm\\qa\\config\\configg.properties");
+//		prop.load(ip);
+//		
+//	    }catch(FileNotFoundException e)
+//		{
+//	    	e.printStackTrace();
+//		}catch(IOException e) {
+//			e.printStackTrace();
+//		}	
+//	}
 	// read the property
+	
 	public static void initialize() throws InterruptedException
 	{
 	 
@@ -46,10 +47,11 @@ public class CSMBase {
 
 		 driver.manage().window().maximize();
 		 driver.manage().deleteAllCookies();
-		 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestUtil.pageload_wait));
-		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TestUtil.implicit_wait));
-		// driver.get(prop.getProperty("url"));//url is launched 
-		 driver.get(prop.getProperty("url"));//url is launched 
+//		 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestUtil.pageload_wait));
+//		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TestUtil.implicit_wait));
+//		// driver.get(prop.getProperty("url"));//url is launched 
+		 driver.get("https://qacms.jgc.com/cms_pt");//url is launched 
+		
 	
 		 
 	}

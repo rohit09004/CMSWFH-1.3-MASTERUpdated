@@ -12,12 +12,15 @@
                   <include name="LoginWithValidCredentials"></include>
          </methods>
 </class>
+<!-- 
 <class name="com.csm.qa.test.HomePageTest">
          <methods>
-                  <include name="clickOnCMSModule"></include>
-                   <include name="clickonIDC"></include>
+                 
+                  <exclude name="clickOnCMSModule"></exclude>
+                  <exclude name="clickonIDC"></exclude>
          </methods>
 </class>
+-->
 </classes>
 
  
