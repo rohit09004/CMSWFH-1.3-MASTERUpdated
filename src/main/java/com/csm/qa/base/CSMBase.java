@@ -39,7 +39,8 @@ public class CSMBase {
 	public static void initialize() throws InterruptedException
 	{
 	 
-		System.setProperty("webdriver.chrome.driver","D:\\Eclipse_rohit\\EclipseSetup_Library\\ChromeDriverJune2023\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver","D:\\Eclipse_rohit\\EclipseSetup_Library\\ChromeDriverJune2023\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\ChromeDriverJune2023\\chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
