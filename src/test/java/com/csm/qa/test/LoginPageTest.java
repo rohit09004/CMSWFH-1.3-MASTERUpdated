@@ -51,9 +51,9 @@ public class LoginPageTest extends CSMBase{
 		Assert.assertEquals(homePagetitle,"Home Page", "Invalid Credentials");
 		System.out.println("Test 1 passed");
 	
-        String shipNo=sh.getRow(1).getCell(1).getStringCellValue();
+       // String shipNo=sh.getRow(1).getCell(1).getStringCellValue();
 	    //driver.findElement(By.xpath("/html/body/div/div/section[2]/div[1]/form/div[3]/div/div/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[2]/div/div/div/input")).sendKeys(shipNo);
-	    System.out.println(shipNo);
+	   // System.out.println(shipNo);
 	    
         driver.quit();
 	}
