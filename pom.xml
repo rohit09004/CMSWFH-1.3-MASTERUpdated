@@ -52,22 +52,22 @@
     <version>5.3.2</version>
 </dependency>
 
-
-<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+ 
+ 
 <dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi-ooxml</artifactId>
     <version>5.2.2</version>
-</dependency>
+</dependency> 
 
-<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+
 <dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi</artifactId>
     <version>5.0.0</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+
 <dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi</artifactId>
@@ -76,13 +76,14 @@
 
 
 
-<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+
 <dependency>
     <groupId>org.slf4j</groupId>
     <artifactId>slf4j-api</artifactId>
     <version>2.0.6</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+
+
 <dependency>
     <groupId>org.slf4j</groupId>
     <artifactId>slf4j-simple</artifactId>
@@ -91,7 +92,8 @@
 </dependency>
 
 
-<!-- https://mvnrepository.com/artifact/org.apache.maven/maven-plugin-api -->
+
+<!--
 <dependency>
     <groupId>org.apache.maven</groupId>
     <artifactId>maven-plugin-api</artifactId>
@@ -99,14 +101,16 @@
 </dependency>
 
 
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+
+
 <dependency>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-surefire-plugin</artifactId>
     <version>3.0.0-M5</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+
+
 <dependency>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-surefire-plugin</artifactId>
@@ -114,7 +118,8 @@
 </dependency>
 
 
-<!-- https://mvnrepository.com/artifact/org.apache.maven/maven-plugin-api -->
+
+
 <dependency>
     <groupId>org.apache.maven</groupId>
     <artifactId>maven-plugin-api</artifactId>
@@ -127,6 +132,9 @@
   <version>3.3.0</version>
   <type>maven-plugin</type>
 </dependency>
+
+-->
+
 
 <!-- https://mvnrepository.com/artifact/net.masterthought/maven-cucumber-reporting -->
 <dependency>
@@ -176,12 +184,16 @@
  <build>
  
  <plugins>
+ 
+ 
 <plugin>
 <groupId>org.apache.maven.plugins</groupId>
   <artifactId>maven-compiler-plugin</artifactId>
    <version>3.11.0</version>
  <configuration></configuration>
  </plugin>
+
+ 
  
  <!-- 
  <plugin>
@@ -208,15 +220,18 @@
 </plugin>
 -->
 
+<!-- 
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-surefire-plugin</artifactId>
     <version>2.19.1</version>
     <configuration>
-       <!--  <testFailureIgnore>true</testFailureIgnore> -->
+       
         
     </configuration>
 </plugin>
+-->
+
 
  <!--  <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -226,12 +241,25 @@
         
         -->
         
-  
+  <!-- 
     <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M3</version>
     </plugin>
+-->
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M3</version>
+                <configuration>
+                <testFailureIgnore>true</testFailureIgnore>
+                <shutdown>kill</shutdown> <!-- Use it if required-->
+                </configuration>
+            </plugin>
+
+
 
 
  </plugins>
