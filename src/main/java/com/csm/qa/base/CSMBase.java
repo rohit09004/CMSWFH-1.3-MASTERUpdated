@@ -41,6 +41,7 @@ public class CSMBase {
 		options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
 		 
+        
          driver.manage().window().maximize();
 		 driver.manage().deleteAllCookies();
 //		 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestUtil.pageload_wait));

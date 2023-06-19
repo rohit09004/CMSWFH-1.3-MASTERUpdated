@@ -1,17 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 19.899 sec <<< FAILURE! - in TestSuite
-LoginWithInvalidCredentials(com.csm.qa.test.LoginPageTest)  Time elapsed: 3.341 sec  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div/section[2]/div[3]/div/div/div/div[1]/button"}
-  (Session info: chrome=114.0.5735.133)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ba115f155be0b2130d1f71f489cf9176, findElement {using=xpath, value=/html/body/div[1]/div/section[2]/div[3]/div/div/div/div[1]/button}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.133, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\106-3249\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52926}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52926/devtoo..., se:cdpVersion: 114.0.5735.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ba115f155be0b2130d1f71f489cf9176
-	at com.csm.qa.test.LoginPageTest.LoginWithInvalidCredentials(LoginPageTest.java:40)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.535 sec - in TestSuite

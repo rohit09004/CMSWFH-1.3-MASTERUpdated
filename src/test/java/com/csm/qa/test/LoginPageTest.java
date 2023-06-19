@@ -1,4 +1,12 @@
 package com.csm.qa.test;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import com.csm.qa.base.CSMBase;
@@ -8,8 +16,17 @@ import com.csm.qa.pages.LoginPage;
 public class LoginPageTest extends CSMBase{
 	LoginPage loginPage;
 	HomePage homePage;
+	public static Sheet sh;
 	
-   @BeforeMethod
+//	public void excelDataImport() throws EncryptedDocumentException, IOException {
+//		
+//		FileInputStream file =new FileInputStream("D:\\Eclipse_rohit\\PO_Screen_Data.xlsx");
+//		sh= WorkbookFactory.create(file).getSheet("Sheet");
+////		String shipNo=sh.getRow(3).getCell(2).getStringCellValue();
+////	    driver.findElement(By.xpath("/html/body/div/div/section[2]/div[1]/form/div[3]/div/div/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[2]/div/div/div/input")).sendKeys(shipNo);
+//    }
+	
+    @BeforeMethod
 	public void setup() throws InterruptedException
 	{
 		initialize();
@@ -28,11 +45,14 @@ public class LoginPageTest extends CSMBase{
 		String homePagetitle= driver.getTitle();
 		Assert.assertEquals(homePagetitle,"Home Page", "Invalid Credentials");
 		System.out.println("Test 1 passed");
-		driver.quit();
+//		String shipNo=sh.getRow(1).getCell(1).getStringCellValue();
+//	    //driver.findElement(By.xpath("/html/body/div/div/section[2]/div[1]/form/div[3]/div/div/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[2]/div/div/div/input")).sendKeys(shipNo);
+//	    System.out.println(shipNo);
+        driver.quit();
 	}
 	
-	@Test(priority=2)
-	public void LoginWithInvalidCredentials() throws InterruptedException
+	//@Test(priority=2)
+	public void LoginWithInvalidCredentialss() throws InterruptedException
 	{
 		
        // homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
