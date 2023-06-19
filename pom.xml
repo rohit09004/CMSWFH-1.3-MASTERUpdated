@@ -113,7 +113,12 @@
     <version>3.9.1</version>
 </dependency>
 
-
+<dependency>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-dependency-plugin</artifactId>
+  <version>3.3.0</version>
+  <type>maven-plugin</type>
+</dependency>
 
 <!-- https://mvnrepository.com/artifact/net.masterthought/maven-cucumber-reporting -->
 <dependency>
