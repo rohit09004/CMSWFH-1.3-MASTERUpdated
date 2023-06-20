@@ -30,12 +30,28 @@ public class ExcelSheetData {
 	 //Path of the excel file
 	  // FileInputStream fs = new FileInputStream("C:\\ExcelSheet\\PO_Screen_Data.xlsx");
 	  // ("user.dir")+"/test-output/FinalTestRport.html"
-	   FileInputStream fs = new FileInputStream("C:\\\\ExcelSheet\\\\PO_Screen_Data.xlsx");
-	   //Creating a workbook
-	   XSSFWorkbook workbook = new XSSFWorkbook(fs);
-	   XSSFSheet sheet = workbook.getSheetAt(0);
-	   Row row = sheet.getRow(1);
-	   Cell cell = row.getCell(1);
-	   System.out.println(sheet.getRow(1).getCell(1));
+	   
+	   
+	   try {
+		   
+		   FileInputStream fs = new FileInputStream("C:\\ExcelSheet\\PO_Screen_Data.xlsx");
+		   //Creating a workbook
+		   XSSFWorkbook workbook = new XSSFWorkbook(fs);
+		   XSSFSheet sheet = workbook.getSheetAt(0);
+		   Row row = sheet.getRow(1);
+		   Cell cell = row.getCell(1);
+		   System.out.println(sheet.getRow(1).getCell(1));
+	   }
+	   catch(FileNotFoundException e){
+		   FileInputStream fs = new FileInputStream("C:\\ExcelSheet\\PO_Screen_Data.xlsx");
+		   //Creating a workbook
+		   XSSFWorkbook workbook = new XSSFWorkbook(fs);
+		   XSSFSheet sheet = workbook.getSheetAt(0);
+		   Row row = sheet.getRow(1);
+		   Cell cell = row.getCell(1);
+		   System.out.println(sheet.getRow(1).getCell(1));
+	   }
+	   System.out.println("try catch ended");
+	   
 	  }
 }
