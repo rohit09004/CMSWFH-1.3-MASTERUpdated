@@ -233,24 +233,24 @@
 
         
 
-
+<!-- 
             <plugin>
               
-               <!--  <groupId>org.apache.maven.plugins</groupId>
+                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M3</version> -->
+                <version>3.0.0-M3</version> 
                 
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M9</version>
                  
                 <configuration>
-              <!--  <testFailureIgnore>true</testFailureIgnore>  --> 
-                <shutdown>kill</shutdown> <!-- Use it if required-->
+                <testFailureIgnore>true</testFailureIgnore>  
+                <shutdown>kill</shutdown> 
                 </configuration>
             </plugin>
 
-
+-->
 
 
  </plugins>
