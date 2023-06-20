@@ -16,10 +16,11 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelSheetData {
 	
-
+   
    public void excelSheetDataMethod() throws InterruptedException, EncryptedDocumentException, IOException
 	{
-		
+	 
+	   FileInputStream fs = new FileInputStream("C:\\ExcelSheet\\PO_Screen_Data.xlsx");
 //	   FileInputStream file =new FileInputStream("D:\\Eclipse_rohit\\CMSWFH(1.3)MASTER\\src\\main\\java\\com\\csm\\qa\\testdata\\PO_Screen_Data.xlsx");
 //	   Sheet sh= WorkbookFactory.create(file).getSheet("Sheet");
 //	   String shipNo=sh.getRow(1).getCell(1).getStringCellValue();
@@ -34,8 +35,7 @@ public class ExcelSheetData {
 	  
 	   try {
 		   
-		   FileInputStream fs = new FileInputStream("C:\\ExcelSheet\\PO_Screen_Data.xlsx");
-		   //Creating a workbook
+          //Creating a workbook
 		   XSSFWorkbook workbook = new XSSFWorkbook(fs);
 		   XSSFSheet sheet = workbook.getSheetAt(0);
 		   Row row = sheet.getRow(1);
@@ -44,6 +44,11 @@ public class ExcelSheetData {
 	   }
 	   catch(FileNotFoundException e){
 		   
+		   XSSFWorkbook workbook = new XSSFWorkbook(fs);
+		   XSSFSheet sheet = workbook.getSheetAt(0);
+		   Row row = sheet.getRow(1);
+		   Cell cell = row.getCell(1);
+		   System.out.println(sheet.getRow(1).getCell(1).getStringCellValue());   
 		System.out.println("catched FiledNotFoundException in catch block");
 	   }
 	   System.out.println("try catch ended");
