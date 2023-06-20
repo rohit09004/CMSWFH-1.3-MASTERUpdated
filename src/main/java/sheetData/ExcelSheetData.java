@@ -31,7 +31,7 @@ public class ExcelSheetData {
 	  // FileInputStream fs = new FileInputStream("C:\\ExcelSheet\\PO_Screen_Data.xlsx");
 	  // ("user.dir")+"/test-output/FinalTestRport.html"
 	   
-	   
+	  
 	   try {
 		   
 		   FileInputStream fs = new FileInputStream("C:\\ExcelSheet\\PO_Screen_Data.xlsx");
@@ -43,13 +43,8 @@ public class ExcelSheetData {
 		   System.out.println(sheet.getRow(1).getCell(1));
 	   }
 	   catch(FileNotFoundException e){
-		   FileInputStream fs = new FileInputStream("C:\\ExcelSheet\\PO_Screen_Data.xlsx");
-		   //Creating a workbook
-		   XSSFWorkbook workbook = new XSSFWorkbook(fs);
-		   XSSFSheet sheet = workbook.getSheetAt(0);
-		   Row row = sheet.getRow(1);
-		   Cell cell = row.getCell(1);
-		   System.out.println(sheet.getRow(1).getCell(1));
+		   
+		System.out.println("catched FiledNotFoundException in catch block");
 	   }
 	   System.out.println("try catch ended");
 	   
