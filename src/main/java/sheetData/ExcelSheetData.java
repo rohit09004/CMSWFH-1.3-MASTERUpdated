@@ -28,7 +28,9 @@ public class ExcelSheetData {
 //	   System.out.println("Excel sheet ship no");
 	   
 	 //Path of the excel file
-	   FileInputStream fs = new FileInputStream("D:\\Eclipse_rohit\\CMSWFH(1.3)MASTER\\src\\main\\java\\com\\csm\\qa\\testdata\\PO_Screen_Data.xlsx");
+	  // FileInputStream fs = new FileInputStream("C:\\ExcelSheet\\PO_Screen_Data.xlsx");
+	  // ("user.dir")+"/test-output/FinalTestRport.html"
+	   FileInputStream fs = new FileInputStream("C:\\ExcelSheet\\PO_Screen_Data.xlsx");
 	   //Creating a workbook
 	   XSSFWorkbook workbook = new XSSFWorkbook(fs);
 	   XSSFSheet sheet = workbook.getSheetAt(0);
