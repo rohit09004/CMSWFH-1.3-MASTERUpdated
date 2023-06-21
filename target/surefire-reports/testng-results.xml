@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-21T12:32:44 IST" name="Surefire suite" finished-at="2023-06-21T12:33:07 IST" duration-ms="23155">
+  <suite started-at="2023-06-21T12:51:52 IST" name="Surefire suite" finished-at="2023-06-21T12:52:16 IST" duration-ms="23459">
     <groups>
     </groups>
-    <test started-at="2023-06-21T12:32:44 IST" name="Surefire test" finished-at="2023-06-21T12:33:07 IST" duration-ms="23155">
+    <test started-at="2023-06-21T12:51:52 IST" name="Surefire test" finished-at="2023-06-21T12:52:16 IST" duration-ms="23459">
       <class name="com.csm.qa.test.LoginPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.csm.qa.test.LoginPageTest@229d10bd]" started-at="2023-06-21T12:32:44 IST" name="setup" finished-at="2023-06-21T12:32:47 IST" duration-ms="2877" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.csm.qa.test.LoginPageTest@229d10bd]" started-at="2023-06-21T12:51:52 IST" name="setup" finished-at="2023-06-21T12:51:55 IST" duration-ms="2789" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="LoginWithValidCredentials()[pri:1, instance:com.csm.qa.test.LoginPageTest@229d10bd]" started-at="2023-06-21T12:32:47 IST" name="LoginWithValidCredentials" finished-at="2023-06-21T12:32:56 IST" duration-ms="9482" status="PASS">
+        <test-method signature="LoginWithValidCredentials()[pri:1, instance:com.csm.qa.test.LoginPageTest@229d10bd]" started-at="2023-06-21T12:51:55 IST" name="LoginWithValidCredentials" finished-at="2023-06-21T12:52:05 IST" duration-ms="9854" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginWithValidCredentials -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.csm.qa.test.LoginPageTest@229d10bd]" started-at="2023-06-21T12:32:56 IST" name="setup" finished-at="2023-06-21T12:32:58 IST" duration-ms="1869" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.csm.qa.test.LoginPageTest@229d10bd]" started-at="2023-06-21T12:52:05 IST" name="setup" finished-at="2023-06-21T12:52:07 IST" duration-ms="1756" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="LoginWithInvalidCredentialss()[pri:2, instance:com.csm.qa.test.LoginPageTest@229d10bd]" started-at="2023-06-21T12:32:58 IST" name="LoginWithInvalidCredentialss" finished-at="2023-06-21T12:33:07 IST" duration-ms="8892" status="PASS">
+        <test-method signature="LoginWithInvalidCredentialss()[pri:2, instance:com.csm.qa.test.LoginPageTest@229d10bd]" started-at="2023-06-21T12:52:07 IST" name="LoginWithInvalidCredentialss" finished-at="2023-06-21T12:52:16 IST" duration-ms="9031" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginWithInvalidCredentialss -->
