@@ -33,7 +33,7 @@ public class ExcelSheetData {
 	  // ("user.dir")+"/test-output/FinalTestRport.html"
 	   
 	  
-//	   try {
+	   try {
 		   
 		   FileInputStream fs = new FileInputStream("C:\\ExcelSheet\\PO.xlsx");
           //Creating a workbook
@@ -44,17 +44,18 @@ public class ExcelSheetData {
 		   Cell cell = row.getCell(1);
 		   System.out.println(sheet.getRow(1).getCell(1).getStringCellValue());
 		   System.out.println("try block executed");
-//	   }
-//	   catch(FileNotFoundException e){
-//		   
+	   }
+	   catch(FileNotFoundException e){
+		   
 //		   FileInputStream fs = new FileInputStream("C:\\ExcelSheet\\PO_Screen_Data.xlsx");
 //		   XSSFWorkbook workbook = new XSSFWorkbook(fs);
 //		   XSSFSheet sheet = workbook.getSheetAt(0);
 //		   Row row = sheet.getRow(1);
 //		   Cell cell = row.getCell(1);
-//		   System.out.println(sheet.getRow(1).getCell(1).getStringCellValue());   
-//		   System.out.println("catched blocked executed for FiledNotFoundException");
-//	   }
+//		   System.out.println(sheet.getRow(1).getCell(1).getStringCellValue());  
+		   e.printStackTrace();
+		   System.out.println("catched blocked executed for FiledNotFoundException");
+	   }
 	   System.out.println("try-catch block ended");
 	   
 	  }
