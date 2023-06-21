@@ -35,7 +35,7 @@ public class ExcelSheetData {
 	  
 	   try {
 		   
-		   FileInputStream fs = new FileInputStream("C:\\ExcelSheet\\POBulkData.xlsx");
+		   FileInputStream fs = new FileInputStream("C:\\ExcelSheet\\POBulkData");
           //Creating a workbook
 		  
 		   XSSFWorkbook workbook = new XSSFWorkbook(fs);
@@ -47,7 +47,8 @@ public class ExcelSheetData {
 	   }
 	   catch(FileNotFoundException e){
 		   
-		   FileInputStream fs = new FileInputStream("C:\\ExcelSheet");
+		   System.out.println("catched blocked started for execution");
+		   FileInputStream fs = new FileInputStream("C:\\ExcelSheet\\POBulkData.xlsx");
 		   XSSFWorkbook workbook = new XSSFWorkbook(fs);
 		   XSSFSheet sheet = workbook.getSheetAt(0);
 		   Row row = sheet.getRow(1);
@@ -56,6 +57,7 @@ public class ExcelSheetData {
 		 //  System.out.println("start print stack trace");
 		//   e.printStackTrace();
 		   System.out.println("catched blocked executed for FiledNotFoundException");
+		   System.out.println("catched blocked eneded for execution");
 	   }
 	   System.out.println("try-catch block ended");
 	   
