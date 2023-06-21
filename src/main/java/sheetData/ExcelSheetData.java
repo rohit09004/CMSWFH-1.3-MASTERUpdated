@@ -1,5 +1,6 @@
 package sheetData;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -35,7 +36,8 @@ public class ExcelSheetData {
 	  
 	   try {
 		   
-		   FileInputStream fs = new FileInputStream("D:\\Eclipse_rohit\\CMSWFH(1.3)MASTER\\src\\test\\java\\com\\csm\\qa\\test\\POBulkData.xlsx");
+		   File file =new File("C:\\ExcelSheet\\POBulkData.xlsx");
+		   FileInputStream fs = new FileInputStream(file);
           //Creating a workbook
 		  
 		   XSSFWorkbook workbook = new XSSFWorkbook(fs);
@@ -48,7 +50,8 @@ public class ExcelSheetData {
 	   catch(FileNotFoundException e){
 		   
 		   System.out.println("catched blocked started for execution");
-		   FileInputStream fs = new FileInputStream("D:\\Eclipse_rohit\\CMSWFH(1.3)MASTER\\src\\test\\java\\com\\csm\\qa\\test\\POBulkData");
+		   File file =new File("C:\\ExcelSheet\\POBulkData.xlsx"); 
+		   FileInputStream fs = new FileInputStream(file);
 		   XSSFWorkbook workbook = new XSSFWorkbook(fs);
 		   XSSFSheet sheet = workbook.getSheetAt(0);
 		   Row row = sheet.getRow(1);
