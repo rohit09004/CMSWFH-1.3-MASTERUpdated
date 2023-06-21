@@ -37,28 +37,28 @@ public class ExcelSheetData {
 	   try {
 		   
 		   System.out.println("try blocked started");
-		   File file =new File("C:\\ExcelSheet\\PoScreen.xlsx");
+		   File file =new File("C:\\DATA\\POJune2023.xlsx");
 		   FileInputStream fs = new FileInputStream(file);
           //Creating a workbook
 		  
 		   XSSFWorkbook workbook = new XSSFWorkbook(fs);
 		   XSSFSheet sheet = workbook.getSheetAt(0);
 		   Row row = sheet.getRow(1);
-		   Cell cell = row.getCell(2);
-		   System.out.println(sheet.getRow(1).getCell(2).getStringCellValue());
+		   Cell cell = row.getCell(3);
+		   System.out.println(sheet.getRow(1).getCell(3).getStringCellValue());
 		   System.out.println("try blocked ended");
 		   System.out.println("try block executed");
 	   }
 	   catch(FileNotFoundException e){
 		   
 		   System.out.println("catched blocked started");
-		   File file =new File("C:\\ExcelSheet\\PoScreen.xlsx"); 
+		   File file =new File("C:\\DATA\\POJune2023.xlsx"); 
 		   FileInputStream fs = new FileInputStream(file);
 		   XSSFWorkbook workbook = new XSSFWorkbook(fs);
 		   XSSFSheet sheet = workbook.getSheetAt(0);
 		   Row row = sheet.getRow(1);
-		   Cell cell = row.getCell(2);
-		   System.out.println(sheet.getRow(1).getCell(2).getStringCellValue());  
+		   Cell cell = row.getCell(3);
+		   System.out.println(sheet.getRow(1).getCell(3).getStringCellValue());  
 		 //  System.out.println("start print stack trace");
 		//   e.printStackTrace();
 		   System.out.println("catched blocked executed for FiledNotFoundException");
