@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
 
@@ -51,6 +52,29 @@ public class ExcelSheetData {
 		   System.out.println("try blocked ended");
 		   System.out.println("try block executed");
 	   }
+	   
+//   catch(FileNotFoundException e){
+//		   
+//		   System.out.println("catched blocked started");
+//		
+//		  // File file =new File("C:\\DATA\\POJune2023.xlsx");
+//		   
+//		   FileSystem fileSystem = FileSystems.getDefault();
+//           Path path = fileSystem.getPath("C:\\DATA\\POJune2023.xlsx");
+//           System.out.println(path.getFileName().toString());
+//           FileInputStream fs = new FileInputStream(path.getFileName().toString());
+//		   XSSFWorkbook workbook = new XSSFWorkbook(fs);
+//		   XSSFSheet sheet = workbook.getSheetAt(0);
+//		   Row row = sheet.getRow(1);
+//		   Cell cell = row.getCell(3);
+//		   System.out.println(sheet.getRow(1).getCell(3).getStringCellValue());  
+//		 //  System.out.println("start print stack trace");
+//		//   e.printStackTrace();
+//		   System.out.println("catched blocked executed for FiledNotFoundException");
+//		   System.out.println("catched blocked eneded");
+//	   }
+	   
+	   
 	   catch(FileNotFoundException e){
 		   
 		   System.out.println("catched blocked started");
@@ -58,12 +82,11 @@ public class ExcelSheetData {
 		  // File file =new File("\\POJune2023.xlsx"); 
 		   //Path path = FileSystems.getDefault().getPath("C:\\DATA\\POJune2023.xlsx").toAbsolutePath();
 		 //  path.getFileName();
-		   File file =new File("C:\\DATA\\POJune2023.xlsx");
-		   System.out.println(file.getAbsolutePath());
 		   //String Path1= path.getFileName().toString();
-		   String Path1= file.getAbsolutePath().toString();
-		 //  System.out.println(path.getFileName().toString());
-		  // File file =new File(Path1);
+		  
+		   File file =new File("POJune2023.xlsx");
+		   System.out.println(file.getAbsolutePath());
+           String Path1= file.getAbsolutePath().toString();
 		   FileInputStream fs = new FileInputStream(Path1);
 		   //FileInputStream fs = new FileInputStream();
 		   XSSFWorkbook workbook = new XSSFWorkbook(fs);
