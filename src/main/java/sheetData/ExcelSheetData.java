@@ -91,9 +91,14 @@ public class ExcelSheetData {
 		   //FileInputStream fs = new FileInputStream();
 		   XSSFWorkbook workbook = new XSSFWorkbook(fs);
 		   XSSFSheet sheet = workbook.getSheetAt(0);
-		   Row row = sheet.getRow(1);
-		   Cell cell = row.getCell(3);
-		   System.out.println(sheet.getRow(1).getCell(3).getStringCellValue());  
+//		   Row row = sheet.getRow(1);
+//		   Cell cell = row.getCell(2);
+		   //System.out.println(sheet.getRow(1).getCell(2).getStringCellValue());
+		   String po1=sheet.getRow(1).getCell(2).getStringCellValue();
+		   System.out.println(po1);
+		   String po2=sheet.getRow(3).getCell(2).getStringCellValue();
+		   System.out.println(po2);
+		   
 		 //  System.out.println("start print stack trace");
 		//   e.printStackTrace();
 //		   System.out.println("catched blocked executed for Filed Not Found Exception");
