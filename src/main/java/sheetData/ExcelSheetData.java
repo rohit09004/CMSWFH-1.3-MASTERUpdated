@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Cell;
@@ -37,7 +39,7 @@ public class ExcelSheetData {
 	   try {
 		   
 		   System.out.println("try blocked started");
-		   File file =new File("C:\\DATA\\POJune2023.xlsx");
+		   File file =new File("C:\\DATA\\POJune2023");
 		   FileInputStream fs = new FileInputStream(file);
           //Creating a workbook
 		  
@@ -52,8 +54,18 @@ public class ExcelSheetData {
 	   catch(FileNotFoundException e){
 		   
 		   System.out.println("catched blocked started");
-		   File file =new File("C:\\DATA"+"\\POJune2023.xlsx"); 
-		   FileInputStream fs = new FileInputStream(file);
+		 //  File file =new File($(System.DefaultWorkingDirectory)+"\\POJune2023.xlsx"); 
+		  // File file =new File("\\POJune2023.xlsx"); 
+		   //Path path = FileSystems.getDefault().getPath("C:\\DATA\\POJune2023.xlsx").toAbsolutePath();
+		 //  path.getFileName();
+		   File file =new File("C:\\DATA\\POJune2023.xlsx");
+		   System.out.println(file.getAbsolutePath());
+		   //String Path1= path.getFileName().toString();
+		   String Path1= file.getAbsolutePath().toString();
+		 //  System.out.println(path.getFileName().toString());
+		  // File file =new File(Path1);
+		   FileInputStream fs = new FileInputStream(Path1);
+		   //FileInputStream fs = new FileInputStream();
 		   XSSFWorkbook workbook = new XSSFWorkbook(fs);
 		   XSSFSheet sheet = workbook.getSheetAt(0);
 		   Row row = sheet.getRow(1);
