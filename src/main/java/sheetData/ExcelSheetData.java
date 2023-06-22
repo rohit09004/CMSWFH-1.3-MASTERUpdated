@@ -52,7 +52,7 @@ public class ExcelSheetData {
 	   catch(FileNotFoundException e){
 		   
 		   System.out.println("catched blocked started");
-		   File file =new File("C:\\DATA\\POJune2023.xlsx"); 
+		   File file =new File("C:\\DATA"+"\\POJune2023.xlsx"); 
 		   FileInputStream fs = new FileInputStream(file);
 		   XSSFWorkbook workbook = new XSSFWorkbook(fs);
 		   XSSFSheet sheet = workbook.getSheetAt(0);
